@@ -8,13 +8,16 @@ export default class Mood extends React.Component {
   }
 
   handleClick(event) {
+    event.preventDefault();
     this.setState({ selectedClassName: 'selected' });
   }
   render() {
     return (
-      <div className={`floatleft mood ${this.state.selectedClassName}`} onClick={this.handleClick}>
-        {this.props.name}
-      </div>
+      <a href="" onClick={this.handleClick}>
+        <div className={`floatleft mood ${this.state.selectedClassName}`} >
+          {this.props.name}
+        </div>
+      </a>
 
     );
   }

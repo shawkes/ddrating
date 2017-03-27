@@ -1,6 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
+import Rater from './Rater.jsx';
 
-export default class App extends Component {
+export default class App extends React.Component {
 
   render() {
     return (
@@ -12,6 +13,7 @@ export default class App extends Component {
         <ul>
           <li>Ace</li>
         </ul>
+        <Rater></Rater>
       </div>
     );
   }

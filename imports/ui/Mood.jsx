@@ -1,4 +1,5 @@
 import React, { PropTypes } from 'react';
+import { Ratings } from '../api/ratings.js';
 
 export default class Mood extends React.Component {
   constructor(props) {
@@ -10,6 +11,9 @@ export default class Mood extends React.Component {
   handleClick(event) {
     event.preventDefault();
     this.setState({ selectedClassName: 'selected' });
+    Ratings.insert({
+      score: this.props.cusomerScore
+    });
   }
   render() {
     return (
@@ -25,4 +29,5 @@ export default class Mood extends React.Component {
 
 Mood.propTypes = {
   name: PropTypes.string.isRequired,
+  cusomerScore: PropTypes.number.isRequired,
 };

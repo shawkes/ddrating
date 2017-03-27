@@ -14,7 +14,8 @@ class Dashboard extends React.Component {
 
   render() {
     return (
-      <div >Customer rating {this.getMood(this.props).toFixed(2)}
+      <div >
+        Customer rating {this.getMood(this.props).toFixed(1)}
       </div>
     );
   }

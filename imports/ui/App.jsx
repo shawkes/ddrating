@@ -1,7 +1,7 @@
 import React from 'react';
 import Rater from './Rater.jsx';
 
-  export default class App extends React.Component {
+export default class App extends React.Component {
 
   render() {
     return (
@@ -9,8 +9,8 @@ import Rater from './Rater.jsx';
         <header>
           <h1>Rate us</h1>
         </header>
-        
-        <Rater></Rater>
+
+        <Rater />
       </div>
     );
   }

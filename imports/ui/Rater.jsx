@@ -7,7 +7,7 @@ export default class Rater extends React.Component {
   }
   render() {
     return (
-      <div class="rater-wrapper">
+      <div className="rater-wrapper">
         <Mood name='awful' ></Mood>
         <Mood name='bad' ></Mood>
         <Mood name='neutral' ></Mood>

@@ -8,3 +8,6 @@
   margin: 10px;
   background-color: pink;
 }
+.selected{
+  background-color: red;
+}

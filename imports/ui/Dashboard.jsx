@@ -4,9 +4,17 @@ import { createContainer } from 'meteor/react-meteor-data';
 import { Ratings } from '../api/ratings.js';
 
 class Dashboard extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  getMood(props) {
+    return props.ratings.reduce((acc, rating) => { return acc + rating.score; }, 0) / props.ratings.length;
+  }
+
   render() {
     return (
-      <div >Number of ratings {this.props.ratings.length}
+      <div >Customer rating {this.getMood(this.props).toFixed(2)}
       </div>
     );
   }

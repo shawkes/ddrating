@@ -2,3 +2,9 @@
 .floatleft {
   float: left;
 }
+.mood {
+  width: 70px;
+  height: 70px;
+  margin: 10px;
+  background-color: pink;
+}

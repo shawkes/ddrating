@@ -1,7 +1,7 @@
 import React from 'react';
 import Rater from './Rater.jsx';
 
-export default class App extends React.Component {
+  export default class App extends React.Component {
 
   render() {
     return (
@@ -9,10 +9,7 @@ export default class App extends React.Component {
         <header>
           <h1>Rate us</h1>
         </header>
-
-        <ul>
-          <li>Ace</li>
-        </ul>
+        
         <Rater></Rater>
       </div>
     );

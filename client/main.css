@@ -15,23 +15,23 @@
   background: yellow;
 }
 .swisherMoveToawful {
-  animation: swishawful 2s 0.5s;
+  animation: swishawful 1s 0.5s;
   animation-fill-mode: forwards;
 }
 .swisherMoveTobad {
-  animation: swishbad 2s 0.5s;
+  animation: swishbad 1s 0.5s;
   animation-fill-mode: forwards;
 }
 .swisherMoveToneutral {
-  animation: swishneutral 2s 0.5s;
+  animation: swishneutral 1s 0.5s;
   animation-fill-mode: forwards;
 }
 .swisherMoveTogood {
-  animation: swishgood 2s 0.5s;
+  animation: swishgood 1s 0.5s;
   animation-fill-mode: forwards;
 }
 .swisherMoveToawesome {
-  animation: swishawesome 2s 0.5s;
+  animation: swishawesome 1s 0.5s;
   animation-fill-mode: forwards;
 }
 .cutout {
@@ -133,12 +133,13 @@
 .mood-selected .mood-good:before,
 .mood-selected .mood-awesome {
   border: 3px solid #ffff;
-  animation : fademouth 2s 0.5s;
+  animation : fademouth 1s 0.5s;
   animation-fill-mode: forwards;
 }
 .mood-selectpop {
   width: 70px;
   height: 70px;
+  margin: 10px;
   border-radius: 50%;
   position: absolute;
   border: 3px solid blue;
@@ -160,10 +161,14 @@
   50% {
     opacity: 0.3;
   }
-  100% {
+  99% {
     transform: scale(2, 2);
     opacity: 0;
     border: 1px solid blue;
+  }
+  100% {
+    transform: scale(1, 1);
+    opacity: 0;
   }
 }
 @keyframes fadeinselectedmood {

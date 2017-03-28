@@ -7,13 +7,18 @@
 .floatleft {
   float: left;
 }
+.cutout {
+  position: relative;
+  width: 98px;
+  height: 98px;
+}
 .mood {
   width: 70px;
   height: 70px;
   border-radius: 50%;
   margin: 10px;
   border: 4px solid #0003;
-  position: relative;
+  position: absolute;
 }
 .mood-awful {
   position: absolute;
@@ -43,7 +48,6 @@
   width: 48px;
   border: 3px solid #0003;
 }
-
 .mood-neutral {
   position: absolute;
   top: 45px;
@@ -81,11 +85,52 @@
   border: 3px solid #0003;
   border-radius: 0 0 80px 80px ;
 }
-.mood-clicked  .good-smile:before {
+.mood-selected  {
+  width: 70px;
+  height: 70px;
+  border: 4px solid #ffff;
+  border-radius: 50%;
+  margin: 10px;
+  position: absolute;
+  z-index: 3;
+}
+.mood-selected .mood-awful,
+.mood-selected .mood-bad:before,
+.mood-selected .mood-neutral,
+.mood-selected .mood-good:before,
+.mood-selected .mood-awsome {
   border: 3px solid #ffff;
   animation : fadesmile 2s 0.5s;
   animation-fill-mode: forwards;
 }
+.mood-selectpop {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  position: absolute;
+  border: 3px solid blue;
+  background: #0000;
+  animation: pop 1.5s;
+  animation-fill-mode: forwards;
+  z-index: 2;
+}
 .selected{
-  background-color: red;
+  background-color: 6005;
+}
+
+
+@keyframes pop {
+  0% {
+    opacity: 0;
+    transform: translate(-30px,-30px) scale(0.1, 0.1);
+    border: 33px solid blue;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    transform: scale(2, 2);
+    opacity: 0;
+    border: 1px solid blue;
+  }
 }

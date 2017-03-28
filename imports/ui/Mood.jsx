@@ -6,6 +6,8 @@ export default class Mood extends React.Component {
     super(props);
     this.state = { selectedClassName: '' };
     this.handleClick = this.handleClick.bind(this);
+    this.moodeSelected = '';
+    this.state.selected = false;
   }
 
   handleClick(event) {
@@ -14,12 +16,21 @@ export default class Mood extends React.Component {
     Ratings.insert({
       score: this.props.cusomerScore
     });
+    this.moodeSelected = (
+      <div className="mood-selected">
+        <div className="mood-selectpop" />
+        <div className={`mood-${this.props.name}`} />
+      </div>);
+    this.state.selected = true;
   }
   render() {
     return (
       <a href="" onClick={this.handleClick} className="floatleft ">
-        <div className={`mood ${this.state.selectedClassName}`} >
-          <div className={`mood-${this.props.name}`} />
+        <div className="cutout">
+          <div className={`mood ${this.state.selectedClassName}`} >
+            <div className={`mood-${this.props.name}`} />
+          </div>
+          {this.moodeSelected}
         </div>
       </a>
 

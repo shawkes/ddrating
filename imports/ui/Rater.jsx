@@ -2,14 +2,23 @@ import React from 'react';
 import Mood from './Mood.jsx';
 
 export default class Rater extends React.Component {
+  constructor(props) {
+    super(props);
+    this.fireSwisher = this.fireSwisher.bind(this);
+    this.state = { swisherMoveToMood: '' };
+  }
+  fireSwisher(mood) {
+    this.setState({ swisherMoveToMood: `swisherMoveTo${mood}` });
+  }
   render() {
     return (
       <div className="rater-wrapper">
-        <Mood name="awful" cusomerScore={0} />
-        <Mood name="bad" cusomerScore={25} />
-        <Mood name="neutral" cusomerScore={50} />
-        <Mood name="good" cusomerScore={70} />
-        <Mood name="awsome" cusomerScore={100} />
+        <div className={`swisher ${this.state.swisherMoveToMood} floatleft`} />
+        <Mood name="awful" customerScore={0} fireSwisher={this.fireSwisher} />
+        <Mood name="bad" customerScore={25} fireSwisher={this.fireSwisher} />
+        <Mood name="neutral" customerScore={50} fireSwisher={this.fireSwisher} />
+        <Mood name="good" customerScore={70} fireSwisher={this.fireSwisher} />
+        <Mood name="awesome" customerScore={100} fireSwisher={this.fireSwisher} />
       </div>
     );
   }

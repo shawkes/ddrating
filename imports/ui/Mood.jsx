@@ -19,8 +19,7 @@ export default class Mood extends React.Component {
     return (
       <a href="" onClick={this.handleClick} className="floatleft ">
         <div className={`mood ${this.state.selectedClassName}`} >
-          <div className={`${this.state.name}`} />
-          {this.props.name}
+          <div className={`mood-${this.props.name}`} />
         </div>
       </a>
 

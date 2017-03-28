@@ -15,6 +15,77 @@
   border: 4px solid #0003;
   position: relative;
 }
+.mood-awful {
+  position: absolute;
+  top :33px;
+  left: 12px;
+  width: 40px;
+  height: 20px;
+  border: 3px solid #0003;
+  border-radius: 80px 80px 0 0;
+}
+.mood-bad {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  width: 54px;
+  height: 46px;
+  overflow: hidden;
+}
+
+.mood-bad:before {
+  content: "";
+  position: absolute;
+  top: 76%;
+  left: 0%;
+  border-radius: 50%;
+  height: 100%;
+  width: 48px;
+  border: 3px solid #0003;
+}
+
+.mood-neutral {
+  position: absolute;
+  top: 45px;
+  left: 20%;
+  width: 50%;
+  height: 0;
+  border: 3px solid #0003;
+  overflow: hidden;
+  border-radius: 8px;
+}
+.mood-good {
+  position: absolute;
+  top: 40px;
+  left: 8px;
+  width: 54px;
+  height: 46px;
+  overflow: hidden;
+}
+.mood-good:before {
+  content: "";
+  position: absolute;
+  top: -66%;
+  left: 0%;
+  border-radius: 50%;
+  height: 100%;
+  width: 48px;
+  border: 3px solid #0003;
+}
+.mood-awsome {
+  position: absolute;
+  top :33px;
+  left: 8px;
+  width: 48px;
+  height: 23px;
+  border: 3px solid #0003;
+  border-radius: 0 0 80px 80px ;
+}
+.mood-clicked  .good-smile:before {
+  border: 3px solid #ffff;
+  animation : fadesmile 2s 0.5s;
+  animation-fill-mode: forwards;
+}
 .selected{
   background-color: red;
 }

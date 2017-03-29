@@ -35,10 +35,19 @@ body {
 }
 .rater-wrapper {
   width: 500px;
+  height: 200px;
   margin: 0 auto;
   transform: scale(50%);
 }
+.rater-question{
+margin: 0 auto;
+font: 2em Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+}
+.rater-que{
+margin: 0 auto;
 
+}
 
 
 .floatleft {

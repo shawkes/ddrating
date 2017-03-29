@@ -16,6 +16,10 @@ export default class Rater extends React.Component {
         <div className="rater-container">
           <div className="floatleft rater-undercard" />
           <div className="rater-card">
+            <div>
+              <div className="rater-question">How did we do? Please rate your experience.</div>
+              <div className="rater-que">We&apos;re always looking to improve our customer experience.</div>
+            </div>
             <div className="rater-wrapper">
               <div className={`swisher ${this.state.swisherMoveToMood} floatleft`} />
               <Mood name="awful" customerScore={0} fireSwisher={this.fireSwisher} />

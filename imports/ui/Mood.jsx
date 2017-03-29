@@ -11,10 +11,12 @@ export default class Mood extends React.Component {
 
   handleClick(event) {
     event.preventDefault();
+    if (this.props.moodeSelected) return;
     this.setState({ selectedClassName: 'selected', selected: true });
     Ratings.insert({
       score: this.props.customerScore
     });
+    this.props.choiceMade();
     this.props.fireSwisher(this.props.name);
     this.moodeSelected = (
       <div>
@@ -42,5 +44,7 @@ export default class Mood extends React.Component {
 Mood.propTypes = {
   name: PropTypes.string.isRequired,
   customerScore: PropTypes.number.isRequired,
-  fireSwisher: PropTypes.func.isRequired
+  fireSwisher: PropTypes.func.isRequired,
+  choiceMade: PropTypes.func.isRequired,
+  moodeSelected: PropTypes.bool.isRequired
 };

@@ -12,13 +12,20 @@ export default class Rater extends React.Component {
   }
   render() {
     return (
-      <div className="rater-wrapper">
-        <div className={`swisher ${this.state.swisherMoveToMood} floatleft`} />
-        <Mood name="awful" customerScore={0} fireSwisher={this.fireSwisher} />
-        <Mood name="bad" customerScore={25} fireSwisher={this.fireSwisher} />
-        <Mood name="neutral" customerScore={50} fireSwisher={this.fireSwisher} />
-        <Mood name="good" customerScore={70} fireSwisher={this.fireSwisher} />
-        <Mood name="awesome" customerScore={100} fireSwisher={this.fireSwisher} />
+      <div className="rater-background">
+        <div className="rater-container">
+          <div className="floatleft rater-undercard" />
+          <div className="rater-card">
+            <div className="rater-wrapper">
+              <div className={`swisher ${this.state.swisherMoveToMood} floatleft`} />
+              <Mood name="awful" customerScore={0} fireSwisher={this.fireSwisher} />
+              <Mood name="bad" customerScore={25} fireSwisher={this.fireSwisher} />
+              <Mood name="neutral" customerScore={50} fireSwisher={this.fireSwisher} />
+              <Mood name="good" customerScore={70} fireSwisher={this.fireSwisher} />
+              <Mood name="awesome" customerScore={100} fireSwisher={this.fireSwisher} />
+            </div>
+          </div>
+        </div>
       </div>
     );
   }

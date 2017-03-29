@@ -216,7 +216,26 @@ body {
   animation-fill-mode: forwards;
   z-index: 2;
 }
-.selected{
+.ticked {
+  position: absolute;
+  background-color: #5bcece;
+  top: 12px;
+  left: 12px;
+  width: 48px;
+  height: 48px;
+  z-index: 5;
+  overflow: hidden;
+  animation: revealtick 0.2s 2s;
+  animation-fill-mode: both;
+  transform-origin: bottom;
+}
+.ticked:after {
+  content: "";
+  position: absolute;
+  width: 48px;
+  height: 65px;
+  transform:translate(-32px,-40px) rotate(45deg);
+  border: 6px solid #fff;
 }
 
 
@@ -271,6 +290,7 @@ body {
   to {transform: translate(243px, 0) scale(486, 1) }
 }
 @keyframes flip  {
-  from {transform: rotateX(0deg); }
-  to {transform: rotateX(90deg); }
+  0% {transform: rotateX(0deg); opacity: 1;}
+  90% {opacity: 0;}
+  100% {transform: rotateX(90deg);opacity: 0; }
 }

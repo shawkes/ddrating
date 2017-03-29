@@ -22,6 +22,7 @@ export default class Mood extends React.Component {
       <div>
         <div className="mood-selected">
           <div className={`mood-${this.props.name}`} />
+          <div className="ticked" />
         </div>
         <div className="mood-selectpop" />
       </div>);

@@ -343,22 +343,22 @@ body {
   position: relative;
 }
 .dashboard-moodbackground-awful, dashboard-score-awful{
-  background-color: #f00;
-  color:#f00;
+  background-color: #9c0114;
+  color:#9c0114;
 }
 .dashboard-moodbackground-bad, dashboard-score-bad{
-  background-color: #f00;
-  color:#f00;
+  background-color: #9c0114;
+  color:#9c0114;
 }
 .dashboard-moodbackground-neutral, dashboard-score-neutral{
-  background-color: #ff0;
-  color:#ff0;
+  background-color: #f6cf1d;
+  color:#f6cf1d;
 }
 .dashboard-moodbackground-good, dashboard-score-good{
-  background-color: #ff0;
-  color:#ff0;
+  background-color: #f6cf1d;
+  color:#f6cf1d;
 }
 .dashboard-moodbackground-awesome, dashboard-score-awesome{
-  background-color: #0f0;
-  color:#0f0;
+  background-color: #569b13;
+  color:#569b13;
 }

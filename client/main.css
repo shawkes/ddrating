@@ -75,6 +75,9 @@ body {
 .floatleft {
   float: left;
 }
+.floatright {
+  float: right;
+}
 .swisher {
   position: relative;
   right: -1px;
@@ -293,4 +296,69 @@ body {
   0% {transform: rotateX(0deg); opacity: 1;}
   90% {opacity: 0;}
   100% {transform: rotateX(90deg);opacity: 0; }
+}
+
+.dashboard-background{
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+}
+.dashboard-container{
+  margin-top: 25vh;
+  height: 350px;
+  background-color: #fff;
+}
+.dashboard-scorecontainer{
+  height: 500px;
+  width: 50%;
+  text-align: center;
+}
+.dashboard-score{
+  font: 6em Rockwell, Courier Bold, Courier, Georgia, Times, Times New Roman, serif;
+  margin: 20% 0 0 0;
+}
+.dashboard-scoreinfo{
+  margin: 0 0 0 0;
+  font: 0.8em Arial Narrow, Arial, sans-serif;
+  color: #b9b9b9;
+}
+.dashboard-moodcontainer{
+  height: 350px;
+  width: 50%;
+}
+.dashboard-moodwrapper{
+  margin: 5vh auto;
+  width: 70px;
+  height:200px
+  transform: scale( 2 );
+  position: relative;
+  top: 10%;
+  transform: scale( 2 ) translateY(-80%);
+}
+.dashboard-moodbackground{
+  width: 78px;
+  height: 78px;
+  margin: 10px;
+  border-radius: 50%;
+  position: relative;
+}
+.dashboard-moodbackground-awful, dashboard-score-awful{
+  background-color: #f00;
+  color:#f00;
+}
+.dashboard-moodbackground-bad, dashboard-score-bad{
+  background-color: #f00;
+  color:#f00;
+}
+.dashboard-moodbackground-neutral, dashboard-score-neutral{
+  background-color: #ff0;
+  color:#ff0;
+}
+.dashboard-moodbackground-good, dashboard-score-good{
+  background-color: #ff0;
+  color:#ff0;
+}
+.dashboard-moodbackground-awesome, dashboard-score-awesome{
+  background-color: #0f0;
+  color:#0f0;
 }

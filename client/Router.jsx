@@ -10,6 +10,12 @@ FlowRouter.route('/', {
   }
 });
 
+FlowRouter.route('/rating', {
+  action() {
+    mount(App, { content: <Rater /> });
+  }
+});
+
 FlowRouter.route('/dashboard', {
   action() {
     mount(App, { content: <Dashboard /> });
